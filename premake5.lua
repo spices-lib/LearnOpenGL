@@ -43,9 +43,14 @@ project "LearnOpenGL"
 	-- The Solution Files.
 	files
 	{
-		-- Game Source Files.
+		-- Source Files.
 		"src/**.h",
 		"src/**.cpp",
+
+		-- glad Files.
+		"%{IncludeDir.glad}/src/**.c",  
+		"%{IncludeDir.glad}/include/glad/**.h",  
+		"%{IncludeDir.glad}/include/KHR/**.h", 
 	}
 
 	-- Macros Definitions
@@ -58,6 +63,7 @@ project "LearnOpenGL"
 	{
 		"src",                                                -- Source Folder.
 		"%{IncludeDir.GLFW}",                                 -- Library: GLFW Source Folder.
+		"%{IncludeDir.glad}/include",                         -- Library: glad Source Folder.
 	}
 
 	-- The Solution Dependency
