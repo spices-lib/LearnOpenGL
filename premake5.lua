@@ -60,6 +60,12 @@ project "LearnOpenGL"
 		"%{IncludeDir.GLFW}",                                 -- Library: GLFW Source Folder.
 	}
 
+	-- The Solution Dependency
+	links
+	{
+		"GLFW",                               -- Dependency: GLFW
+	}
+
 	-- Platform: Windows
 	filter "system:windows"
 		systemversion "latest"                 -- Use Lastest WindowSDK
